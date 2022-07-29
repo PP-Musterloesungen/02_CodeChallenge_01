@@ -9,32 +9,7 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 "Die Summe der Zahlen ist: summe"
 */
 
-/*********** Variante 1  ****************/
-// Vorteil: gute Lesbarkeit | aber viele Variablen
-
-// Deklaration
-// let ziffer1, ziffer2;
-// let zahl1, zahl2;
-// let summe;
-
-// // Eingabe | Wertzuweisung :: Ziffern
-// ziffer1 = prompt("Zahl 1: ");
-// ziffer2 = prompt("Zahl 2: ");
-// console.log(typeof ziffer1);
-// console.log(typeof ziffer2);
-
-// // Typkonvertierung | Ziffer --> Zahl (string --> number)
-// zahl1 = parseInt(ziffer1);
-// zahl2 = parseInt(ziffer2);
-// console.log(typeof zahl1);
-// console.log(typeof zahl2);
-
-// Berechnung :: Summe / Addition
-// summe = zahl1 + zahl2;
-
-// Ausgabe
-// console.log("Die Summe der Zahlen ist: " + summe);
-
+// 
 /*********** Variante 2  ****************/
 
 // Kompaktere Lösung
@@ -46,14 +21,41 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 // summe = zahl1 + zahl2;
 // console.log("Die Summe der Zahlen ist: " + summe);
 
-/*********** Variante 3  ****************/
-// Kompakt, aber schlechter lesbar, unflexibel
+// /*********** Variante 3  ****************/
+// // Kompakt, aber schlechter lesbar, unflexibel
 
-console.log
-(
-    "Die Summe ist: " + 
-   (
-    parseFloat(prompt("Bitte Zahl 1 eingeben")) +
-    parseFloat(prompt("Bitte Zahl 2 eingeben"))
-   ) 
-);
+// console.log
+// (
+//     "Die Summe ist: " + 
+//    (
+//     parseFloat(prompt("Bitte Zahl 1 eingeben")) +
+//     parseFloat(prompt("Bitte Zahl 2 eingeben"))
+//    ) 
+// );
+
+/*  Meine Lösung zur Programmieraufgabe ... */
+
+let zahl1 = Number(prompt("Bitte Zahl 1 eingeben: "));
+let operant = prompt("Bitte Operanten eingeben ( + | - ): ");
+let zahl2 = Number(prompt("Bitte Zahl 2 eingeben: "));
+
+console.log("Das Ergebnis lautet: " + rechner(zahl1, operant, zahl2));
+
+function rechner(zahl1, operant, zahl2) {
+    switch (operant) {
+        case "+":
+            return console.log(summe(zahl1,zahl2));
+        case "-":
+            return console.log(differenz(zahl1,zahl2));
+        default:
+            return "Error!"
+    }
+}
+
+function summe(zahl1, zahl2) {
+    return (zahl1 + zahl2)
+}
+
+function differenz(zahl1, zahl2) {
+    return (zahl1 - zahl2)
+}
