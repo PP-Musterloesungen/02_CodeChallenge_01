@@ -14,7 +14,6 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 /*********************************************************************************/
 
 let zahl, zahl1, zahl2, operant, op;
-zahl = "STOP";
 
 // zahl1 = Number(prompt("Bitte Zahl 1 eingeben: "));
 zahl1 = getZahl();
@@ -29,8 +28,8 @@ console.log("Das Ergebnis von " + zahl1 + " " + operant + " " + zahl2 + " = " + 
 
 /*********************************************************************************/
 function getZahl() {
-    do { zahl = Number(prompt("Bitte ein Zahl eingeben: "));  
-    } while (typeof zahl !== "number");
+    do { zahl = Number(prompt("Bitte ein Zahl eingeben: "));
+    } while (isNaN(zahl));
     return zahl
 }
 /*********************************************************************************/
