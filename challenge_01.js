@@ -26,6 +26,7 @@ zahl2 = getZahl();
 
 console.log("Das Ergebnis von " + zahl1 + " " + operant + " " + zahl2 + " = " + rechner(zahl1, operant, zahl2));
 
+/*********************************************************************************/
 function getZahl() {
     do { zahl = Number(prompt("Bitte ein Zahl eingeben: "));  
     } while (typeof zahl !== "number");
@@ -80,3 +81,5 @@ function division(zahl1, zahl2) {
       else 
         return console.log("Division durch 0 ist nicht erlaubt!")
      }
+/*********************************************************************************/
+// EoP
