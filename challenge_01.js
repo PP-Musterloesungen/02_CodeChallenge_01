@@ -15,13 +15,10 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 
 let zahl, zahl1, zahl2, operant, op;
 
-// zahl1 = Number(prompt("Bitte Zahl 1 eingeben: "));
 zahl1 = getZahl();
 
-// operant = prompt("Bitte Operanten eingeben ( + | - | * | / ): ");
 operant = getOperant();
 
-// zahl2 = Number(prompt("Bitte Zahl 2 eingeben: "));
 zahl2 = getZahl();
 
 console.log("Das Ergebnis von " + zahl1 + " " + operant + " " + zahl2 + " = " + rechner(zahl1, operant, zahl2));
