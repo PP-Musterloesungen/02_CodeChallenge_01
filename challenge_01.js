@@ -39,6 +39,9 @@ function getOperant(){
                 case "/":
                     op = true;
                     break
+                case null:
+                    console.log("Push exit by user!");
+                    exit
                 default:
                     op = false;
                     console.log("Bitte einen korrekten Operanten eingeben!");
@@ -80,3 +83,46 @@ function division(zahl1, zahl2) {
      }
 /*********************************************************************************/
 // EoP
+// let arr = [true, false, true, false];
+// console.log(arr[0]);
+
+// let obj =
+// {
+// level1:
+// {
+// param1: 12,
+// level2:
+// {
+// param2: 24
+// }
+// }
+// };
+// console.log(obj.level1.param1);
+// console.log(obj.level1.level2.param2);
+
+/*********************************************************/
+
+// let zahl1 = Number(prompt("Bitte Zahl 1 eingeben: "));
+// let operant = prompt("Bitte Operanten eingeben ( + oder| * ): ");
+// let zahl2 = Number(prompt("Bitte Zahl 2 eingeben: "));
+
+// console.log("Das Ergebnis lautet: " + rechner(zahl1, operant, zahl2));
+
+// function rechner(zahl1, operant, zahl2) {
+//     switch (operant) {
+//         case "+":
+//             return summe(zahl1,zahl2);
+//         case "*":
+//             return produkt(zahl1,zahl2);
+//         default:
+//             return "Error!"
+//     }
+// }
+
+// function summe(zahl1, zahl2) {
+//     return (zahl1 + zahl2)
+// }
+
+// function produkt(zahl1, zahl2) {
+//     return (zahl1 * zahl2)
+// }
